@@ -1,0 +1,19 @@
+services:
+  xss-bot-greeter:
+    build: chal
+    ports:
+      - "8080:3000"
+    deploy: {resources: {limits: {cpus: '2', memory: 2048M}}}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "python3 -c 'import urllib.request; urllib.request.urlopen(\"http://localhost:3000\")'"]
+      interval: 30s
+      timeout: 5s
+      retries: 1
+      start_period: 30s
+    shm_size: 2g
+    environment:
+      H_SITEKEY: 48ac511e-2b86-4464-9faa-6ee25e9acb72
+      H_SECRET: ES_0cce8f6f91f341e0aeb0edc17dfff765
+      INIT_URL: https://c05-greeter.mizu.chal.sh/
+      FLAG: bsideshk{n3x7_t1M3_1ll_g1vE_n0_cOmM372!11!}

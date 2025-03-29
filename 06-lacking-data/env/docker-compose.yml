@@ -1,0 +1,10 @@
+services:
+  chall:
+    build: ./chal
+    ports:
+      - 28101:1337
+    networks:
+      - default
+
+networks:
+  default:

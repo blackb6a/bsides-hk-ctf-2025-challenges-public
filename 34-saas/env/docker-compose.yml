@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  chal:
+    build: ./chal
+    ports:
+      - 1337:1337

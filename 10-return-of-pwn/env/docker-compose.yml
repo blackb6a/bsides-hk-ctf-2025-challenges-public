@@ -1,0 +1,6 @@
+services:
+  chal:
+    build: chal
+    ports:
+      - "3000:1337"
+    restart: unless-stopped

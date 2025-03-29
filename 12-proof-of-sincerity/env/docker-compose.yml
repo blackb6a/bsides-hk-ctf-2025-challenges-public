@@ -1,0 +1,11 @@
+services:
+  chall:
+    build: ./chal
+    ports:
+      - 28103:1337
+    deploy: {resources: {limits: {cpus: '2', memory: 1024M}}}
+    networks:
+      - default
+
+networks:
+  default:

@@ -1,0 +1,8 @@
+services:
+  chal:
+    build: chal
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    environment:
+      FLAG: bsideshk{b1t2_0f_p0L1u21oN_W1th_JS0n_we4k3R_t0K3n}

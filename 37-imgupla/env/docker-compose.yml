@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  imgupla:
+    build:
+      context: ./imgupla
+      args:
+        FLAG: 'bsideshk{O:4:"fl3g":0:{}'
+        MYSQL_ROOT_PASSWORD: 'BTBTTelE7uU4h6S3sfjP9aj1LMq4jJer'
+    ports: ['8080:80']
+    deploy: {resources: {limits: {cpus: '2', memory: 1Gi}}}
+    environment:
+      MYSQL_ROOT_PASSWORD: 'BTBTTelE7uU4h6S3sfjP9aj1LMq4jJer'
+      APP_SECRET: 'dvIdLzbYJqYnaoWin1jvSCkWG51dzChP'
