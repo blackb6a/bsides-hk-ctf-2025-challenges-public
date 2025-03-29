@@ -1,4 +1,4 @@
-BsidesHK CTF 2025
+BSidesHK CTF 2025
 ===
 
 ## Index
